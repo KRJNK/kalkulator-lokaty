@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator lokaty — zysk po podatku Belki</title>
+<meta name="description" content="Ile zarobisz na lokacie? Wpisz kwotę, oprocentowanie i czas — policzymy zysk po 19% podatku Belki.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪙</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>Zysk z lokaty</h1>
+  <p>Ile realnie dopisze bank po podatku?</p>
+  <section class="card">
+    <label>Kwota (zł) <input id="kw" type="number" min="0" step="any" value="20000"></label>
+    <label>Oprocentowanie roczne (%) <input id="op" type="number" min="0" step="any" value="5"></label>
+    <label>Miesięcy <input id="ms" type="number" min="1" max="120" value="12"></label>
+    <label>Kapitalizacja <select id="kap"><option value="1">miesięczna</option><option value="3">kwartalna</option><option value="12">na koniec</option></select></label>
+  </section>
+  <section class="card">
+    <h2>Wynik</h2>
+    <div id="out" class="big">—</div>
+    <p id="detail" class="hint"></p>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>Odsetki dopisywane są co okres kapitalizacji: im częstsza, tym nieco wyższy zysk (procent składany). Od wypracowanych odsetek bank z automatu potrąca 19% podatku Belki, więc „na rękę” dostajesz 81% zysku brutto. Ten kalkulator pokazuje obie liczby, żeby nie było rozczarowania.</p>
+    <p><strong>Przykład:</strong> 20&nbsp;000 zł na 12 miesięcy przy 5% i kapitalizacji miesięcznej daje ok. 1023 zł odsetek brutto, po podatku Belki ok. 829 zł czystego zysku. Przy inflacji 4% realny zysk topnieje niemal do zera — lokata chroni kapitał, nie pomnaża go.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
